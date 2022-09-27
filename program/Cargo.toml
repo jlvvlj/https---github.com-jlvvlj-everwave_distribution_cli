@@ -1,0 +1,22 @@
+[package]
+name = "wave-dist"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+borsh = "0.9.3"
+borsh-derive = "0.9.3"
+num-derive = "0.3.3"
+num-traits = "0.2.14"
+solana-program = "1.10.9"
+spl-token = { version = "3.2.0", features = ["no-entrypoint"] }
+thiserror = "1.0.30"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,26 @@
+[package]
+name = "wave-dist-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bs58 = "0.4.0"
+clap = "2.34.0"
+mem = "0.5.0"
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+solana-clap-utils = "1.10.9"
+solana-cli-config = "1.10.9"
+solana-client = "1.10.9"
+solana-logger = "1.10.9"
+solana-program = "1.10.9"
+solana-sdk = "1.10.9"
+spl-associated-token-account = { version = "1.0.3", features = ["no-entrypoint"] }
+spl-token = { version = "3.2.0", features = ["no-entrypoint"] }
+wave-dist = { path = "../program", features = [ "no-entrypoint" ] }
+
+[[bin]]
+name = "wave-dist"
+path = "src/main.rs"
